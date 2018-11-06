@@ -6,11 +6,10 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 17:45:02 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/06 12:35:42 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/06 15:22:09 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <string.h>
 
 void	*ft_memset(void *s, int c, size_t len)

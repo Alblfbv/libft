@@ -6,11 +6,10 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 11:38:03 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/06 13:12:19 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/06 15:21:34 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <string.h>
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)

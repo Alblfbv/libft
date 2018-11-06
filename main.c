@@ -6,44 +6,30 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 17:44:56 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/06 13:36:37 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/06 18:54:21 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
 
-	char	*str;
 	char	*str1;
 	char	*str2;
 	char	*str3;
-	char	*str4;
-	char	*str5;
-	char	*str_memccpy;
-	char	*str_ft_memccpy;
-	int		i;
+	char	*str_return_c;
+	char	*str_return_ft;
+	int		return_c;
+	int		return_ft;
 
-	str = (char*)malloc(sizeof(str) * (10 + 1));
-	str1 = (char*)malloc(sizeof(str) * (10 + 1));
-	str2 = (char*)malloc(sizeof(str) * (10 + 1));
-	str3 = (char*)malloc(sizeof(str) * (10 + 1));
-	str4 = (char*)malloc(sizeof(str) * (10 + 1));
-	str5 = strdup("0123456789");
-	i = 0;
-	while (i < 10)
-	{
-		str[i] = 'A';
-		str1[i] = 'B';
-		str2[i] = 'B';
-		str3[i] = 'D';
-		str4[i] = 'E';
-		i++;
-	}
+	str1 = strdup("ABCDEFGHIJ");
+	str2 = strdup("abcdefghij");
+	str3 = strdup("0123456789");
 	printf("\n\nTest de la libft\n");
-
+/*
 //tests memset
 	printf("\n	--- memset ---\n\n");
 	printf("Initial string\n%s\n%s\n\n", str1, str2);
@@ -61,31 +47,71 @@ int	main(void)
 	printf("\nResult bzero +4 : %s\nResult ft_bzero +4 : %s", str1, str2);
 
 //tests memcpy
+	str1 = strdup("ABCDEFGHIJ");
+	str2 = strdup("abcdefghij");
+
 	printf("\n\n	--- memcpy ---\n\n");
-	memcpy(str3, str, 4);
-	ft_memcpy(str4, str, 4);
-	printf("Result memcpy : %s\nResult ft_memcpy : %s", str3, str4);
+	memcpy(str1, str3, 4);
+	ft_memcpy(str2, str3, 4);
+	printf("Result memcpy : %s\nResult ft_memcpy : %s", str1, str2);
 
 //tests memccpy
+	str1 = strdup("ABCDEFGHIJ");
+	str2 = strdup("abcdefghij");
+
 	printf("\n\n	--- memccpy ---\n\n");
-	str_memccpy = memccpy(str3, str5, 48 + 7, 15);
-	str_ft_memccpy = ft_memccpy(str4, str5, 48 + 7, 15);
-	printf("Result memccpy : %s\nResult ft_memccpy : %s\nString returned memccpy : %s\nString returned ft_memccpy : %s", str3, str4, str_memccpy, str_ft_memccpy);
+	str_return_c = memccpy(str1, str3, 48 + 5, 15);
+	str_return_ft = ft_memccpy(str2, str3, 48 + 5, 15);
+	printf("Result memccpy : %s\nResult ft_memccpy : %s\nString returned memccpy : %s\nString returned ft_memccpy : %s", str1, str2, str_return_c, str_return_ft);
 
-
+*/
 //tests memmove
+	str1 = strdup("ABCDEFGHIJ");
+	str2 = strdup("abcdefghij");
 
+	printf("\n\n	--- memmove ---\n\n");
+	memmove(str1 + 2, str1, 6);
+	ft_memmove(str2 + 2, str2, 6);
+	printf("Result memmove : %s\nResult ft_memmove : %s", str1, str2);
 
+	str1 = strdup("ABCDEFGHIJ");
+	str2 = strdup("abcdefghij");
+	memmove(str1 - 2, str1, 6);
+	ft_memmove(str2 - 2, str2, 6);
+	printf("\nResult memmove : %s\nResult ft_memmove : %s", str1, str2);
+/*
+	str1 = strdup("ABCDEFGHIJ");
+	str2 = strdup("abcdefghij");
+	memmove(str1, str1 + 2, 8);
+	ft_memmove(str2, str2 + 2, 8);
+	printf("\nResult memmove : %s\nResult ft_memmove : %s", str1, str2);
+*//*
 //tests memchr
-
+	printf("\n\n	--- memchr ---\n\n");
+	str_return_c = memchr(str3, 48 + 5, 6);
+	str_return_ft = ft_memchr(str3, 48 + 5, 6);
+	printf("String returned memchr : %s\nString returned ft_memchr : %s", str_return_c, str_return_ft);
+	str_return_c = memchr(str3, 48 + 7, 5);
+	str_return_ft = ft_memchr(str3, 48 + 7, 5);
+	printf("\nString returned memchr : %s\nString returned ft_memchr : %s", str_return_c, str_return_ft);
 
 //tests memcmp
-
+	printf("\n\n	--- memcmp ---\n\n");
+	return_c = memcmp(str1, str1, 6);
+	return_ft = ft_memcmp(str1, str1, 6);
+	printf("Return memcmp : %d\nReturn ft_memcmp : %d", return_c, return_ft);
+	return_c = memcmp(str1, str2, 6);
+	return_ft = ft_memcmp(str1, str2, 6);
+	printf("\nReturn memcmp : %d\nReturn ft_memcmp : %d", return_c, return_ft);
+	return_c = memcmp(strdup(""), strdup(""), 6);
+	return_ft = ft_memcmp(strdup(""), strdup(""), 6);
+	printf("\nReturn memcmp : %d\nReturn ft_memcmp : %d", return_c, return_ft);
+	
 
 //tests strlen
 	printf("\n\n	--- strlen ---\n\n");
-	printf("Result strlen : %lu\nResult ft_strlen : %d", strlen(str), ft_strlen(str));
-
+	printf("Result strlen : %lu\nResult ft_strlen : %d", strlen(str3), ft_strlen(str3));
+*/
 //tests strdup
 
 
