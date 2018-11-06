@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/05 17:45:02 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/06 12:35:42 by allefebv         ###   ########.fr       */
+/*   Created: 2018/11/06 11:38:03 by allefebv          #+#    #+#             */
+/*   Updated: 2018/11/06 13:12:19 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <string.h>
 
-void	*ft_memset(void *s, int c, size_t len)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	int	i;
-	unsigned char	*str;
+	unsigned char	*dst_2;
+	unsigned char	*src_2;
+	unsigned char	c_2;
+	int				i;
 
-	str = (unsigned char*)s;
+	dst_2 = (unsigned char*)dst;
+	src_2 = (unsigned char*)src;
+	c_2 = (unsigned char)c;
 	i = 0;
-	while (i < len)
+	while (i < n && src_2[i-1] != c)
 	{
-		str[i] = (unsigned char)c;
+		dst_2[i] = src_2[i];
 		i++;
 	}
-	return (s);
+	if (src_2[i-1] == c)
+		return (dst + i);
+	return (NULL);
 }
