@@ -4,13 +4,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-int	main(void)
-{
-	char c;
-	
-	c = 32;
-	printf("%d\n", ft_isprint(c));
-	printf("%d", isprint(c));
-	return (0);
-}

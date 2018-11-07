@@ -13,6 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int	main(void)
 {
@@ -29,7 +30,7 @@ int	main(void)
 	str2 = strdup("abcdefghij");
 	str3 = strdup("0123456789");
 	printf("\n\nTest de la libft\n");
-/*
+
 //tests memset
 	printf("\n	--- memset ---\n\n");
 	printf("Initial string\n%s\n%s\n\n", str1, str2);
@@ -64,7 +65,7 @@ int	main(void)
 	str_return_ft = ft_memccpy(str2, str3, 48 + 5, 15);
 	printf("Result memccpy : %s\nResult ft_memccpy : %s\nString returned memccpy : %s\nString returned ft_memccpy : %s", str1, str2, str_return_c, str_return_ft);
 
-*/
+
 //tests memmove
 	str1 = strdup("ABCDEFGHIJ");
 	str2 = strdup("abcdefghij");
@@ -79,13 +80,13 @@ int	main(void)
 	memmove(str1 - 2, str1, 6);
 	ft_memmove(str2 - 2, str2, 6);
 	printf("\nResult memmove : %s\nResult ft_memmove : %s", str1, str2);
-/*
+
 	str1 = strdup("ABCDEFGHIJ");
 	str2 = strdup("abcdefghij");
 	memmove(str1, str1 + 2, 8);
 	ft_memmove(str2, str2 + 2, 8);
 	printf("\nResult memmove : %s\nResult ft_memmove : %s", str1, str2);
-*//*
+
 //tests memchr
 	printf("\n\n	--- memchr ---\n\n");
 	str_return_c = memchr(str3, 48 + 5, 6);
@@ -111,7 +112,7 @@ int	main(void)
 //tests strlen
 	printf("\n\n	--- strlen ---\n\n");
 	printf("Result strlen : %lu\nResult ft_strlen : %d", strlen(str3), ft_strlen(str3));
-*/
+
 //tests strdup
 
 
@@ -167,8 +168,17 @@ int	main(void)
 
 
 //tests toupper
-
+	printf("\n\n	--- toupper ---\n\n");
+	printf("%c\n", ft_toupper('a'));
+	printf("%c\n", toupper('a'));
+	printf("%c\n", ft_toupper('-'));
+	printf("%c\n", toupper('-'));
 
 //tests tolower
+	printf("\n\n	--- tolower ---\n\n");
+	printf("%c\n", ft_tolower('A'));
+	printf("%c\n", tolower('A'));
+	printf("%c\n", ft_tolower('-'));
+	printf("%c\n", tolower('-'));
 
 }

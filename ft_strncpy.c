@@ -1,4 +1,4 @@
-char	*strncpy(char *dest, char *src, int n)
+char	*ft_strncpy(char *dest, char *src, int n)
 {
 	int	i;
 

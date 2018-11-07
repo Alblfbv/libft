@@ -4,12 +4,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-int	main(void)
-{
-	char c;
-	
-	c = 'A';
-	printf("%d", ft_isalnum(c));
-	return (0);
-}
