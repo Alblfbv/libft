@@ -32,7 +32,16 @@ SRCS	=	ft_memset.c		\
 			ft_isascii.c	\
 			ft_isprint.c	\
 			ft_toupper.c	\
-			ft_tolower.c
+			ft_tolower.c	\
+			ft_strnew.c		\
+			ft_strdel.c		\
+			ft_strclr.c		\
+			ft_striter.c	\
+			ft_striteri.c	\
+			ft_strmap.c		\
+			ft_strmapi.c	\
+			ft_putchar.c	\
+			ft_putstr.c
 
 OBJS	=	$(SRCS:.c=.o)
 
@@ -45,6 +54,7 @@ clean:
 	rm -f $(OBJS)
 
 fclean:		clean
+	rm -f $(NAME)
 
 re:			fclean all
 

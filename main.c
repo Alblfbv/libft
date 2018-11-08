@@ -15,6 +15,24 @@
 #include <string.h>
 #include <ctype.h>
 
+void	ft_test_str(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	ft_putchar('\n');
+}
+
+char	ft_char_ch(char c)
+{
+	c = c + 1;
+}
+
 int	main(void)
 {
 
@@ -181,4 +199,40 @@ int	main(void)
 	printf("%c\n", ft_tolower('-'));
 	printf("%c\n", tolower('-'));
 
+//tests strnew
+	printf("\n\n	--- strnew ---\n\n");
+	str1 = ft_strnew(strlen(str1));
+	printf("Result ft_strnew%s", str1);
+	memset(str1, 68, 10);
+	printf("\nResult ft_strnew after memset : %s", str1);
+	
+//tests strdel
+	printf("\n\n	--- strdel ---\n\n");
+//	ft_strdel(&str1);	
+//	printf("Result ft_strdel : %s", str1);
+
+//tests ft_strclr
+	printf("\n\n	--- strclr ---\n\n");
+	ft_strclr(str1);
+	printf("Result ft_strclr%s", str1);
+	memset(str1, 68, 10);
+	printf("\nResult ft_strclr after memset : %s", str1);
+
+//tests ft_striter
+	printf("\n\n	--- striter ---\n\n");
+	ft_striter(str1, &ft_test_str);
+	memset(str1, 68, 10);
+	printf("\nResult ft_striter after memset : %s", str1);
+
+//tests ft_striteri
+
+
+//tests ft_strmap
+	printf("\n\n	--- strmap ---\n\n");
+	str1 = strdup("ABCDEFGHIJ");
+	printf("Initial string : %s", str1);
+	str1 = ft_strmap(str1, &ft_char_ch);
+	printf("\nResult ft_strmap : %s", str1);
+
+//tests ft_strmapi
 }
