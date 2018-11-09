@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 17:44:56 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/06 18:54:21 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/09 11:02:38 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_test_str(char *str)
 char	ft_char_ch(char c)
 {
 	c = c + 1;
+	return (c);
 }
 
 int	main(void)

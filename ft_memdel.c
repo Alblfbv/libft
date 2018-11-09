@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 15:12:48 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/09 11:09:21 by allefebv         ###   ########.fr       */
+/*   Created: 2018/11/09 17:46:10 by allefebv          #+#    #+#             */
+/*   Updated: 2018/11/09 17:47:52 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdlib.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t len)
+void	ft_memdel(void **ap)
 {
-	unsigned char	*s1p;
-	unsigned char	*s2p;
-	unsigned int	i;
-
-	s1p = (unsigned char*)s1;
-	s2p = (unsigned char*)s2;
-	i = 0;
-	while (i < len && s1p[i] == s2p[i])
-		i++;
-	if (i == len)
-		return (0);
-	return (s1p[i] - s2p[i]);
+	free(*ap);
+	*ap = NULL;
 }

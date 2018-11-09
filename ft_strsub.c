@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 15:12:48 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/09 11:09:21 by allefebv         ###   ########.fr       */
+/*   Created: 2018/11/09 18:35:10 by allefebv          #+#    #+#             */
+/*   Updated: 2018/11/09 20:34:01 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
+#include <stdlib.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*s1p;
-	unsigned char	*s2p;
-	unsigned int	i;
+	char			*new;
+	unsigned long	i;
 
-	s1p = (unsigned char*)s1;
-	s2p = (unsigned char*)s2;
 	i = 0;
-	while (i < len && s1p[i] == s2p[i])
+	if (!(new = (char*)malloc(sizeof(new) * (len + 1))))
+		return (NULL);
+	while (i < len)
+	{
+		new[i] = s[start];
 		i++;
-	if (i == len)
-		return (0);
-	return (s1p[i] - s2p[i]);
+		start++;
+	}
+	new[i] = '\0';
+	return (new);
 }

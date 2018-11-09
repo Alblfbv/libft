@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/09 10:02:45 by allefebv          #+#    #+#             */
+/*   Updated: 2018/11/09 10:20:03 by allefebv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
@@ -5,14 +17,14 @@ char	*ft_strcat(char *dest, char *src)
 
 	i = 0;
 	j = 0;
-	while(dest[i] != '\0')
+	while (dest[i] != '\0')
 		i++;
-	while(src[j] != '\0')
+	while (src[j] != '\0')
 	{
 		dest[i] = src[j];
 		j++;
 		i++;
 	}
 	dest[i] = src[j];
-	return(dest);
+	return (dest);
 }

@@ -1,14 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/09 10:05:25 by allefebv          #+#    #+#             */
+/*   Updated: 2018/11/09 10:29:54 by allefebv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_strlen(const char *zouloutage)
+#include "libft.h"
+
+int		ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
-	while(zouloutage[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
