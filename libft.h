@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/12 15:39:53 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/12 21:40:50 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *str);
 char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
+char	*ft_strrev(char *str);
 
 #endif
