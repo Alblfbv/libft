@@ -48,6 +48,7 @@ SRCS	=	ft_memset.c		\
 			ft_strsub.c		\
 			ft_strjoin.c	\
 			ft_strtrim.c	\
+			ft_strsplit.c	\
 			ft_putchar.c	\
 			ft_putstr.c
 
