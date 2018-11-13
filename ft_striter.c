@@ -6,18 +6,21 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:04:39 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/09 10:38:02 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/13 20:26:46 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 void	ft_striter(char *s, void (*f)(char *))
 {
-	int	i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s != NULL)
 	{
-		f(s + i);
-		i++;
+		while (*s != '\0')
+		{
+			f(s);
+			s++;
+		}
 	}
 }

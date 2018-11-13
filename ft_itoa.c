@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:26:55 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/13 17:53:35 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/13 18:39:03 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_int_size(int n)
 	return (tab_size);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char			*str;
 	int				i;

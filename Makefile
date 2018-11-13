@@ -4,7 +4,7 @@ AR		=	ar rc
 
 CC		=	gcc
 
-#CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror
 
 SRCS	=	ft_memset.c		\
 			ft_bzero.c		\

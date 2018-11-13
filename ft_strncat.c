@@ -6,11 +6,11 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:05:58 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/09 10:30:25 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/13 19:01:34 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int n)
+char	*ft_strncat(char *dest, const char *src, int n)
 {
 	int	i;
 	int	j;
