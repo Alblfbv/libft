@@ -6,14 +6,14 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:58:09 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/12 16:51:02 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/13 18:00:07 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_create(char *dest, char *src, char c)
+static char	*ft_create(char *dest, char *src, char c)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ char	*ft_create(char *dest, char *src, char c)
 	return (dest);
 }
 
-int		ft_size(char const *s, char c)
+static int	ft_size(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -51,7 +51,7 @@ int		ft_size(char const *s, char c)
 	return (j);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**s_str;
 	int		i;
