@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:31:15 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/14 11:20:40 by allefebv         ###   ########.fr       */
+/*   Created: 2018/11/14 18:17:21 by allefebv          #+#    #+#             */
+/*   Updated: 2018/11/14 18:41:33 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *))
 {
-	if (!(s1) || !(s2))
-		return (0);
-	if (!(ft_strncmp(s1, s2, (int)n)))
-		return (1);
-	return (0);
+	t_list	*save_next;
+
+	if (lst == NULL)
+		return ;
+	while (lst != NULL)
+	{
+		save_next = lst->next;
+		f(lst);
+		lst = save_next;
+	}
 }

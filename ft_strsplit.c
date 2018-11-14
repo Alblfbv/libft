@@ -6,21 +6,22 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:58:09 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/13 18:00:07 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/14 14:05:18 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static char	*ft_create(char *dest, char *src, char c)
+static char	*ft_strdup_split(char const *src, char c)
 {
-	int	i;
+	int		i;
+	char	*dest;
 
 	i = 0;
 	while (src[i] != c && src[i] != '\0')
 		i++;
-	if (!(dest = (char*)malloc(sizeof(dest) * (i + 1))))
+	if (!(dest = (char*)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	i = 0;
 	while (src[i] != c && src[i] != '\0')
@@ -41,12 +42,9 @@ static int	ft_size(char const *s, char c)
 	j = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] != c && s[i] != '\0')
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			j++;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		while (s[i] == c)
-			i++;
+		i++;
 	}
 	return (j);
 }
@@ -54,26 +52,27 @@ static int	ft_size(char const *s, char c)
 char		**ft_strsplit(char const *s, char c)
 {
 	char	**s_str;
+	int		size_s_str;
 	int		i;
 	int		j;
 
-	if (!(s_str = (char**)malloc(sizeof(s_str) * (ft_size(s, c) + 1))))
+	if (s == NULL)
 		return (NULL);
+	size_s_str = ft_size(s, c);
+	if (!(s_str = (char**)malloc(sizeof(char*) * (size_s_str + 1))))
+		return (NULL);
+	s_str[size_s_str] = 0;
 	i = 0;
 	j = 0;
-	while (s[i] == c)
-		i++;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
-			if (!(s_str[j] = ft_create(s_str[j], (char*)s + i, c)))
+		if (s[i] != c && (s[i - 1] == c || s[i - 1] == '\0'))
+		{
+			if (!(s_str[j] = ft_strdup_split((s + i), c)))
 				return (NULL);
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		j++;
+			j++;
+		}
+		i++;
 	}
-	s_str[j] = 0;
 	return (s_str);
 }

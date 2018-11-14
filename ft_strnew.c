@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:32:12 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/13 20:22:11 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:09:18 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,5 @@
 
 char	*ft_strnew(size_t len)
 {
-	char	*str;
-
-	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	ft_bzero(str, len + 1);
-	return (str);
+	return ((char*)ft_memalloc(len + 1));
 }

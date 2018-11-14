@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:54:34 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/13 19:01:47 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/14 11:23:37 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char const *str, int fd)
 {
 	int	i;
 
+	if (!(str))
+		return ;
 	i = 0;
 	while (str[i] != '\0')
 	{

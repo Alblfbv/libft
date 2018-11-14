@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:31:15 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/14 11:20:40 by allefebv         ###   ########.fr       */
+/*   Created: 2018/11/14 17:44:24 by allefebv          #+#    #+#             */
+/*   Updated: 2018/11/14 18:06:19 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (!(s1) || !(s2))
-		return (0);
-	if (!(ft_strncmp(s1, s2, (int)n)))
-		return (1);
-	return (0);
+	if (alst == NULL || new == NULL)
+		return ;
+	new->next = *alst;
+	*alst = new;
 }
