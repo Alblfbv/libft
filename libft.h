@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 14:51:34 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:56:20 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ char				*ft_strncat(char *dst, const char *src, size_t len);
 size_t				ft_strlcat(char *dst, const char *src, size_t len);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
-char				*ft_strstr(const char *haystk, const char *needle);
-char				*ft_strnstr(const char *haystk, const char *needle, size_t len);
+char				*ft_strstr(const char *s, const char *needle);
+char				*ft_strnstr(const char *s, const char *needle, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t len);
 int					ft_atoi(const char *s);

@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:17:21 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 13:08:46 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 15:20:54 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *))
 {
 	t_list	*save_next;
 
-	if (lst == NULL)
+	if (lst == NULL || f == NULL)
 		return ;
 	while (lst != NULL)
 	{
