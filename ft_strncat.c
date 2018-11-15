@@ -6,20 +6,20 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:05:58 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 12:31:32 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:50:00 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dst, const char *src, int n)
+char	*ft_strncat(char *dst, const char *src, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
 	while (dst[i] != '\0')
 		i++;
-	while (src[j] != '\0' && j < n)
+	while (src[j] != '\0' && j < len)
 	{
 		dst[i] = src[j];
 		j++;

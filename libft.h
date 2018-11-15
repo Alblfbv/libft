@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 14:05:09 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:51:34 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,16 @@ int					ft_memcmp(const void *s1, const void *s2, size_t len);
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s);
 char				*ft_strcpy(char *dst, const char *src);
-char				*ft_strncpy(char *dst, const char *src, int n);
+char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcat(char *dst, const char *src);
-char				*ft_strncat(char *dst, const char *src, int n);
+char				*ft_strncat(char *dst, const char *src, size_t len);
 size_t				ft_strlcat(char *dst, const char *src, size_t len);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystk, const char *needle);
-char				*ft_strnstr(const char *haystk, const char *needle, int n);
+char				*ft_strnstr(const char *haystk, const char *needle, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
-int					ft_strncmp(const char *s1, const char *s2, int n);
+int					ft_strncmp(const char *s1, const char *s2, size_t len);
 int					ft_atoi(const char *s);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);

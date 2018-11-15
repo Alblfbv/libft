@@ -6,9 +6,11 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:00:10 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 12:37:54 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:29:13 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *s)
 {
@@ -19,9 +21,8 @@ int	ft_atoi(const char *s)
 	i = 0;
 	sign = 1;
 	nb = 0;
-	while (s[i] < 27 || s[i] == '\n' || s[i] == '\t'
-			|| s[i] == '\r' || s[i] == '\r'
-			|| s[i] == '\v' || s[i] == 32 || s[i] == '\f')
+	while (s[i] == '\n' || s[i] == '\t' || s[i] == '\r' || s[i] == ' '
+						|| s[i] == '\v' || s[i] == '\f')
 		i++;
 	if (s[i] == '+' || s[i] == '-')
 	{
@@ -29,7 +30,7 @@ int	ft_atoi(const char *s)
 			sign = -1;
 		i++;
 	}
-	while (s[i] >= '0' && s[i] <= '9')
+	while (ft_isdigit(s[i]))
 	{
 		nb = nb * 10 + s[i] - 48;
 		i++;
