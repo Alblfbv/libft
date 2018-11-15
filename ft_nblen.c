@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_nblen.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 16:26:55 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 18:09:31 by allefebv         ###   ########.fr       */
+/*   Created: 2018/11/15 18:08:02 by allefebv          #+#    #+#             */
+/*   Updated: 2018/11/15 18:13:17 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-static int	ft_int_size(int n)
+size_t	ft_nblen(int n)
 {
-	int	tab_size;
-	int	cpy;
+	size_t			tab_size;
+	unsigned int	cpy;
 
 	tab_size = 1;
 	cpy = n;
@@ -30,32 +30,4 @@ static int	ft_int_size(int n)
 		cpy = cpy / 10;
 	}
 	return (tab_size);
-}
-
-char		*ft_itoa(int n)
-{
-	char			*str;
-	int				i;
-	unsigned int	cpy;
-
-	i = 0;
-	cpy = n;
-	if (!(str = ft_strnew(ft_int_size(n))))
-		return (NULL);
-	if (n < 0)
-		cpy = n * -1;
-	while (cpy >= 10)
-	{
-		str[i] = cpy % 10 + 48;
-		cpy = cpy / 10;
-		i++;
-	}
-	str[i] = cpy + 48;
-	if (n < 0)
-	{
-		i++;
-		str[i] = '-';
-	}
-	str = ft_strrev(str);
-	return (str);
 }

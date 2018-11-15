@@ -2,9 +2,11 @@ NAME	=	libft.a
 
 AR		=	ar rc
 
+RL		=	ranlib
+
 CC		=	gcc
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -c
 
 SRCS	=	ft_memset.c		\
 			ft_bzero.c		\
@@ -64,14 +66,21 @@ SRCS	=	ft_memset.c		\
 			ft_lstadd.c		\
 			ft_lstiter.c	\
 			ft_lstmap.c		\
-			ft_strrev.c
+			ft_lstadd_end.c	\
+			ft_strrev.c		\
+			ft_strndup.c	\
+			ft_power.c		\
+			ft_nblen.c
+
 
 OBJS	=	$(SRCS:.c=.o)
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(SRCS)
+	$(CC) $(CFLAGS) $(SRCS)
 	$(AR) $(NAME) $(OBJS)
+	$(RL) $(NAME)
 
 clean:
 	rm -f $(OBJS)
@@ -80,5 +89,3 @@ fclean:		clean
 	rm -f $(NAME)
 
 re:			fclean all
-
-

@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 14:56:20 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:47:45 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
-void				ft_putnbr(int n);
 void				ft_putendl(char const *s);
+void				ft_putnbr(int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
@@ -80,6 +80,10 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *elem);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_lstadd_end(t_list **alst, t_list *elem);
 char				*ft_strrev(char *s);
+char				*ft_strndup(const char *s, size_t len);
+int					ft_power(int nb, int pwr);
+size_t				ft_nblen(int n);
 
 #endif
