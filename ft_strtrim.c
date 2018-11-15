@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 19:28:12 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 12:50:35 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:14:58 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int		i;
-	int		len;
-	char	*new;
+	size_t		i;
+	size_t		len;
+	char		*new;
 
 	if (!(s))
 		return (NULL);

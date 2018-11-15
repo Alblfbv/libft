@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:57:03 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 12:32:37 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:13:02 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t len)
 {
-	unsigned long	i;
-	unsigned long	j;
-	unsigned long	dst_len;
+	size_t	i;
+	size_t	j;
+	size_t	dst_len;
 
 	i = 0;
 	j = 0;
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 	if (i < len)
 	{
 		dst[i] = '\0';
-		return ((unsigned long)ft_strlen(src) + dst_len);
+		return (ft_strlen(src) + dst_len);
 	}
-	return ((unsigned long)ft_strlen(src) + len);
+	return (ft_strlen(src) + len);
 }
