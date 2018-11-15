@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 18:47:45 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 20:37:55 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,8 @@ char				*ft_strrev(char *s);
 char				*ft_strndup(const char *s, size_t len);
 int					ft_power(int nb, int pwr);
 size_t				ft_nblen(int n);
+int					ft_islower(int c);
+int					ft_isupper(int c);
+void				ft_sort(int *tab, size_t len);
 
 #endif
