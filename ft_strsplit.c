@@ -6,31 +6,31 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:58:09 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/14 14:05:18 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:53:30 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static char	*ft_strdup_split(char const *src, char c)
+static char	*ft_strdup_split(char const *s, char c)
 {
 	int		i;
-	char	*dest;
+	char	*new;
 
 	i = 0;
-	while (src[i] != c && src[i] != '\0')
+	while (s[i] != c && s[i] != '\0')
 		i++;
-	if (!(dest = (char*)malloc(sizeof(char) * (i + 1))))
+	if (!(new = (char*)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	i = 0;
-	while (src[i] != c && src[i] != '\0')
+	while (s[i] != c && s[i] != '\0')
 	{
-		dest[i] = src[i];
+		new[i] = s[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	new[i] = '\0';
+	return (new);
 }
 
 static int	ft_size(char const *s, char c)

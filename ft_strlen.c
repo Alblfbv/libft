@@ -6,11 +6,9 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:05:25 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/09 10:29:54 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:28:42 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_strlen(const char *s)
 {
@@ -18,8 +16,6 @@ int		ft_strlen(const char *s)
 
 	i = 0;
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

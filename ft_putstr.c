@@ -6,22 +6,22 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:02:27 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/14 11:22:40 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:56:19 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+void	ft_putstr(char const *s)
 {
 	int	i;
 
-	if (!(str))
+	if (!(s))
 		return ;
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		ft_putchar(str[i]);
+		ft_putchar(s[i]);
 		i++;
 	}
 }

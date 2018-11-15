@@ -6,11 +6,11 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:36:03 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/14 14:55:39 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:35:40 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 char	*ft_strstr(const char *haystk, const char *needle)
 {

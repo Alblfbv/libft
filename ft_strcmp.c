@@ -6,11 +6,9 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:03:08 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/09 13:17:08 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:36:45 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

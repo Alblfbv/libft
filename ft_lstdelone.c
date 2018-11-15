@@ -6,12 +6,12 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 16:05:30 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/14 16:19:22 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 13:07:19 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include "libft.h"
 
 void	ft_lstdelone(t_list **alst, void(*del)(void *, size_t))
 {

@@ -6,13 +6,11 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:00:10 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/09 14:10:30 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:37:54 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *s)
 {
 	int	i;
 	int	sign;
@@ -21,19 +19,19 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	nb = 0;
-	while (str[i] < 27 || str[i] == '\n' || str[i] == '\t'
-			|| str[i] == '\r' || str[i] == '\r'
-			|| str[i] == '\v' || str[i] == 32 || str[i] == '\f')
+	while (s[i] < 27 || s[i] == '\n' || s[i] == '\t'
+			|| s[i] == '\r' || s[i] == '\r'
+			|| s[i] == '\v' || s[i] == 32 || s[i] == '\f')
 		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (s[i] == '+' || s[i] == '-')
 	{
-		if (str[i] == '-')
+		if (s[i] == '-')
 			sign = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (s[i] >= '0' && s[i] <= '9')
 	{
-		nb = nb * 10 + str[i] - 48;
+		nb = nb * 10 + s[i] - 48;
 		i++;
 	}
 	return (nb * sign);

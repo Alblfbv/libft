@@ -6,24 +6,24 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:31:29 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/13 18:59:10 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:31:06 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, const char *src, int n)
+char	*ft_strncpy(char *dst, const char *src, int n)
 {
 	int	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < n)
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
 	while (i < n)
 	{
-		dest[i] = '\0';
+		dst[i] = '\0';
 		i++;
 	}
-	return (dest);
+	return (dst);
 }

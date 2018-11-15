@@ -6,37 +6,37 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 19:28:12 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/14 11:22:15 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 12:50:35 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strtrim(char const *str)
+char	*ft_strtrim(char const *s)
 {
 	int		i;
 	int		len;
 	char	*new;
 
-	if (!(str))
+	if (!(s))
 		return (NULL);
 	i = 0;
-	len = ft_strlen(str) - 1;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
+	len = ft_strlen(s) - 1;
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	while (str[len] == ' ' || str[len] == '\n' || str[len] == '\t')
+	while (s[len] == ' ' || s[len] == '\n' || s[len] == '\t')
 		len--;
-	if (i != ft_strlen(str))
+	if (i != ft_strlen(s))
 	{
-		if (!(new = ft_strsub(str, i, (len - i + 1))))
+		if (!(new = ft_strsub(s, i, (len - i + 1))))
 			return (NULL);
 	}
 	else
 	{
-		if (!(new = (char*)malloc(sizeof(new) * ft_strlen(str))))
+		if (!(new = (char*)malloc(sizeof(new) * ft_strlen(s))))
 			return (NULL);
-		ft_bzero(new, ft_strlen(str));
+		ft_bzero(new, ft_strlen(s));
 	}
 	return (new);
 }

@@ -6,27 +6,27 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 21:21:53 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/12 22:22:20 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 13:10:14 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+char	*ft_strrev(char *s)
 {
 	int 	start;
 	int		end;
 	char	tmp;
 
 	start = 0;
-	end = ft_strlen(str) - 1;
+	end = ft_strlen(s) - 1;
 	while (start < end)
 	{
-		tmp = str[end];
-		str[end] = str[start];
-		str[start] = tmp;
+		tmp = s[end];
+		s[end] = s[start];
+		s[start] = tmp;
 		start++;
 		end--;
 	}
-	return (str);
+	return (s);
 }
