@@ -6,9 +6,11 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:31:29 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 14:49:20 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:52:34 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
