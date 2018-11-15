@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 21:21:53 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 13:10:14 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:01:15 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrev(char *s)
 {
-	int 	start;
+	int		start;
 	int		end;
 	char	tmp;
 

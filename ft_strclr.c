@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:02:55 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/13 20:23:14 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:00:16 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_strclr(char *s)
 {
-	if(s != NULL)
+	if (s != NULL)
 		ft_bzero(s, ft_strlen(s));
 }
