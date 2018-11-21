@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 20:37:55 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/19 14:53:18 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,8 @@ size_t				ft_nblen(int n);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 void				ft_sort(int *tab, size_t len);
+char				*ft_strnjoin(char const *s1, char const *s2, size_t len);
+char				*ft_strextend(char *s1, char const *s2);
+char				*ft_strnextend(char *s1, char const *s2, size_t len);
 
 #endif

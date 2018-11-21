@@ -73,7 +73,10 @@ SRCS	=	ft_memset.c		\
 			ft_nblen.c		\
 			ft_isupper.c	\
 			ft_islower.c	\
-			ft_sort.c
+			ft_sort.c		\
+			ft_strnjoin.c	\
+			ft_strextend.c	\
+			ft_strnextend.c
 
 
 OBJS	=	$(SRCS:.c=.o)
