@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 14:51:21 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/21 14:13:44 by allefebv         ###   ########.fr       */
+/*   Updated: 2018/11/21 14:27:02 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ char	*ft_strnextend(char *s1, char const *s2, size_t len)
 	free(tmp);
 	return (s1);
 }
-
