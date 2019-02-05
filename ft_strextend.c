@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strextend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 14:45:53 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/19 14:50:55 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/11/12 16:24:54 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strextend(char *s1, char const *s2)
 	if (!(s1) || !(s2))
 		return (NULL);
 	tmp = s1;
-	if (!(s1 = (char*)malloc(sizeof(s1) * ft_strlen(s1) + ft_strlen(s2) + 1)))
+	if (!(s1 = (char*)malloc(sizeof(s1) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (NULL);
 	ft_strcpy(s1, tmp);
 	ft_strcat(s1, s2);

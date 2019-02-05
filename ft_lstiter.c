@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:17:21 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 15:20:54 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/11/12 16:24:56 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Parcourt la liste lst en appliquant à chaque maillon la fonction f.
+*/
 
 #include "libft.h"
 

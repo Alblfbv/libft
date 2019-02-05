@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_strrnchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 17:44:24 by allefebv          #+#    #+#             */
-/*   Updated: 2019/11/12 16:24:57 by allefebv         ###   ########.fr       */
+/*   Created: 2018/11/09 10:33:56 by allefebv          #+#    #+#             */
+/*   Updated: 2019/01/31 17:07:56 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *elem)
+char	*ft_strrnchr(const char *s, int c, int n)
 {
-	if (elem == NULL)
-		return ;
-	elem->next = *alst;
-	*alst = elem;
+	while (s[n] != c)
+		n--;
+	if (s[n] == c)
+		return ((char*)s + n);
+	else
+		return (NULL);
 }

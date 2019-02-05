@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   process_dd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 17:44:24 by allefebv          #+#    #+#             */
-/*   Updated: 2019/11/12 16:24:57 by allefebv         ###   ########.fr       */
+/*   Created: 2019/01/23 16:57:48 by allefebv          #+#    #+#             */
+/*   Updated: 2019/01/23 17:19:16 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstadd(t_list **alst, t_list *elem)
+char	*ft_process_dd(t_conv_spec conv_spec, va_list *ap)
 {
-	if (elem == NULL)
-		return ;
-	elem->next = *alst;
-	*alst = elem;
+	char	*str;
+
+	(void)conv_spec;
+	str = ft_itoa(va_arg(*ap, long));
+	return (str);
 }

@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 17:44:24 by allefebv          #+#    #+#             */
-/*   Updated: 2019/11/12 16:24:57 by allefebv         ###   ########.fr       */
+/*   Created: 2019/01/14 17:23:47 by jfleury           #+#    #+#             */
+/*   Updated: 2019/01/16 13:36:54 by jfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstadd(t_list **alst, t_list *elem)
+char	*ft_strupcase(char *str)
 {
-	if (elem == NULL)
-		return ;
-	elem->next = *alst;
-	*alst = elem;
+	int		i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = str[i] - 32;
+		i++;
+	}
+	return (str);
 }

@@ -3,34 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:26:55 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 18:09:31 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/11/12 16:24:59 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_int_size(int n)
-{
-	int	tab_size;
-	int	cpy;
-
-	tab_size = 1;
-	cpy = n;
-	if (n < 0)
-	{
-		tab_size++;
-		cpy = n * -1;
-	}
-	while (cpy >= 10)
-	{
-		tab_size++;
-		cpy = cpy / 10;
-	}
-	return (tab_size);
-}
 
 char		*ft_itoa(int n)
 {
@@ -40,7 +20,7 @@ char		*ft_itoa(int n)
 
 	i = 0;
 	cpy = n;
-	if (!(str = ft_strnew(ft_int_size(n))))
+	if (!(str = ft_strnew(ft_nblen(n))))
 		return (NULL);
 	if (n < 0)
 		cpy = n * -1;

@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_char_replace.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 17:44:24 by allefebv          #+#    #+#             */
-/*   Updated: 2019/11/12 16:24:57 by allefebv         ###   ########.fr       */
+/*   Created: 2019/01/16 18:50:02 by jfleury           #+#    #+#             */
+/*   Updated: 2019/01/16 18:54:31 by jfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstadd(t_list **alst, t_list *elem)
+char	*ft_char_replace(char *str, char c, char r)
 {
-	if (elem == NULL)
-		return ;
-	elem->next = *alst;
-	*alst = elem;
+	int		i;
+
+	i = 0;
+	while (str[i] != 0)
+	{
+		if (str[i] == c)
+			str[i] = r;
+		i++;
+	}
+	return (str);
 }
