@@ -6,7 +6,7 @@
 #    By: allefebv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/28 20:45:46 by allefebv          #+#    #+#              #
-#    Updated: 2019/02/02 17:11:36 by allefebv         ###   ########.fr        #
+#    Updated: 2019/02/12 18:27:49 by allefebv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,10 @@ SRCS	=	ft_memset.c		\
 			ft_lstiter.c	\
 			ft_lstmap.c		\
 			ft_lstadd_end.c	\
+			ft_lst_end.c	\
+			ft_lst_size.c	\
+			ft_lst_n_size.c	\
+			ft_lst_is_inlist.c	\
 			ft_lstprint_int.c	\
 			ft_lstprint_str.c	\
 			ft_strrev.c		\

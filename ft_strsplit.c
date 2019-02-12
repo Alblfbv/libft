@@ -6,7 +6,7 @@
 /*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:58:09 by allefebv          #+#    #+#             */
-/*   Updated: 2019/11/12 16:24:53 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/11/12 16:26:44 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,15 +67,6 @@ char		**ft_strsplit(char const *s, char c)
 	j = 0;
 	while (s[i] != '\0')
 	{
-<<<<<<< HEAD
-		if (s[i] != c && (s[i - 1] == c || s[i - 1] == '\0'))
-		{
-			if (!(s_str[j] = ft_strdup_split((s + i), c)))
-				return (NULL);
-			j++;
-		}
-		i++;
-=======
 		while (s[i] == c && s[i] != '\0')
 			i++;
 		if (s[i] == '\0')
@@ -84,7 +75,6 @@ char		**ft_strsplit(char const *s, char c)
 			return (NULL);
 		else
 			j++;
->>>>>>> libft
 	}
 	return (s_str);
 }
