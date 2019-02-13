@@ -6,7 +6,7 @@
 #    By: allefebv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/28 20:45:46 by allefebv          #+#    #+#              #
-#    Updated: 2019/02/12 18:27:49 by allefebv         ###   ########.fr        #
+#    Updated: 2019/02/13 17:36:19 by allefebv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRCS	=	ft_memset.c		\
 			ft_memdel.c		\
 			ft_strnew.c		\
 			ft_strdel.c		\
+			ft_sstrdel.c	\
 			ft_strclr.c		\
 			ft_striter.c	\
 			ft_striteri.c	\

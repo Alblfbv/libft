@@ -6,11 +6,12 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 14:26:01 by allefebv          #+#    #+#             */
-/*   Updated: 2019/01/29 15:28:57 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/02/13 18:02:02 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_read(char *tmp, char **line, int fd, int *check_end)
 {
@@ -87,5 +88,6 @@ int		get_next_line(const int fd, char **line)
 		return (-1);
 	if (check_end == 0)
 		return (1);
+	free(tmp);
 	return (0);
 }

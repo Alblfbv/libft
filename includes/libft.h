@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2019/02/12 18:28:06 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/02/13 17:39:34 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ char				*ft_strnstr(const char *s, const char *needle, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t len);
 void				ft_strdel(char **as);
+void				ft_sstrdel(char **s, int len);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
