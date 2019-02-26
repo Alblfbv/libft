@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_n_size.c                                    :+:      :+:    :+:   */
+/*   ft_lst_sorted.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 16:58:37 by allefebv          #+#    #+#             */
-/*   Updated: 2019/02/19 17:01:06 by allefebv         ###   ########.fr       */
+/*   Created: 2019/02/18 13:07:43 by allefebv          #+#    #+#             */
+/*   Updated: 2019/02/18 13:18:02 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lst_n_size(t_list *start, t_list *end)
+int	ft_lst_is_sorted(t_list *lst)
 {
-	int	i;
-	
-	if (start == NULL)
+	if (lst == NULL)
 		return (0);
-	i = 1;
-	while (start != end && start->next != NULL)
-	{
-		start = start->next;
-		i++;
-	}
-	return (i);
+	while (lst->next != NULL && *(int*)lst->content < *(int*)lst->next->content)
+		lst = lst->next;
+	if (lst->next == NULL)
+		return (1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2019/02/13 17:39:34 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/02/18 13:59:27 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lst_end(t_list *start);
+t_list				*ft_lst_find_prev(t_list *lst, t_list *elem);
 void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *elem);
@@ -109,6 +110,7 @@ void				ft_lstprint_str(t_list *lst);
 int					ft_lst_size(t_list *lst);
 int					ft_lst_n_size(t_list *lst, t_list *end);
 int					ft_lst_is_inlist(t_list *list, t_list *elem);
+int					ft_lst_is_sorted(t_list *lst);
 
 int					ft_power(int nb, int pwr);
 size_t				ft_nblen(int n);

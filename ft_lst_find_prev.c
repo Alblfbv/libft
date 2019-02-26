@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_n_size.c                                    :+:      :+:    :+:   */
+/*   ft_lst_find_prev.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 16:58:37 by allefebv          #+#    #+#             */
-/*   Updated: 2019/02/19 17:01:06 by allefebv         ###   ########.fr       */
+/*   Created: 2019/02/18 13:46:37 by allefebv          #+#    #+#             */
+/*   Updated: 2019/02/18 16:27:53 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lst_n_size(t_list *start, t_list *end)
+t_list	*ft_lst_find_prev(t_list *lst, t_list *elem)
 {
-	int	i;
-	
-	if (start == NULL)
-		return (0);
-	i = 1;
-	while (start != end && start->next != NULL)
-	{
-		start = start->next;
-		i++;
-	}
-	return (i);
+	if (lst == NULL || elem == NULL || elem == lst)
+		return (NULL);
+	while (lst->next != elem)
+		lst = lst->next;
+	return (lst);
 }
