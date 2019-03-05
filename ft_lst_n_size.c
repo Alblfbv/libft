@@ -6,7 +6,7 @@
 /*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 16:58:37 by allefebv          #+#    #+#             */
-/*   Updated: 2019/02/19 17:01:06 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/03/05 14:46:59 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_lst_n_size(t_list *start, t_list *end)
 {
 	int	i;
-	
+
 	if (start == NULL)
 		return (0);
 	i = 1;
