@@ -6,7 +6,11 @@
 /*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:57:38 by allefebv          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2019/11/12 16:24:55 by allefebv         ###   ########.fr       */
+=======
+/*   Updated: 2019/03/05 16:45:21 by allefebv         ###   ########.fr       */
+>>>>>>> small corrections
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +30,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(new->content = (void*)malloc(content_size)))
+		if (!(new->content = (void*)malloc(sizeof(content) * content_size)))
 			return (NULL);
 		ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
