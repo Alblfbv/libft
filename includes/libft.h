@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2019/03/05 14:47:19 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/08/13 17:32:47 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,14 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_tree
+{
+	void			*content;
+	size_t			content_size;
+	struct s_tree	*left;
+	struct s_tree	*right;
+}					t_tree;
 
 void				*ft_memset(void *s, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t len);
@@ -110,6 +118,11 @@ int					ft_lst_size(t_list *lst);
 int					ft_lst_n_size(t_list *lst, t_list *end);
 int					ft_lst_is_inlist(t_list *list, t_list *elem);
 int					ft_lst_is_sorted(t_list *lst);
+
+t_tree				*ft_treenew(void const *content, size_t content_size);
+int				ft_treeadd(t_tree **root, t_tree *node,
+						int (*ft_comp)(void*, void*));
+void	ft_tree_inorder_print(t_tree *root, void (*ft_print)(void*));
 
 int					ft_power(int nb, int pwr);
 size_t				ft_nblen(int n);

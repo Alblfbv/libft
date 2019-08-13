@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_tree_inorder_print.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allefebv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:32:12 by allefebv          #+#    #+#             */
-/*   Updated: 2018/11/15 12:41:24 by allefebv         ###   ########.fr       */
+/*   Created: 2019/08/13 15:28:26 by allefebv          #+#    #+#             */
+/*   Updated: 2019/08/13 15:56:12 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t len)
+void	ft_tree_inorder_print(t_tree *root, void (*ft_print)(void*))
 {
-	return ((char*)ft_memalloc(len + 1));
+	if (!root)
+		return ;
+	ft_tree_inorder_print(root->left, ft_print);
+	ft_print(root->content);
+	ft_tree_inorder_print(root->right, ft_print);
 }
