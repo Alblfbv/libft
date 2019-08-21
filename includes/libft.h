@@ -6,7 +6,7 @@
 /*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2019/08/13 17:32:47 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/08/18 12:04:18 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,9 +120,11 @@ int					ft_lst_is_inlist(t_list *list, t_list *elem);
 int					ft_lst_is_sorted(t_list *lst);
 
 t_tree				*ft_treenew(void const *content, size_t content_size);
-int				ft_treeadd(t_tree **root, t_tree *node,
+t_tree				*ft_treenew_ptr(void *content);
+int					ft_treeadd(t_tree **root, t_tree *node,
 						int (*ft_comp)(void*, void*));
-void	ft_tree_inorder_print(t_tree *root, void (*ft_print)(void*));
+void				ft_tree_inorder_print(t_tree *root, void *additional_cntnt,
+						void (*ft_print)(void*, void*));
 
 int					ft_power(int nb, int pwr);
 size_t				ft_nblen(int n);

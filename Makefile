@@ -6,7 +6,7 @@
 #    By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/28 20:45:46 by allefebv          #+#    #+#              #
-#    Updated: 2019/11/12 16:28:07 by allefebv         ###   ########.fr        #
+#    Updated: 2019/11/12 16:28:51 by allefebv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRCS	=	$(addprefix srcs/, ft_memset.c ft_bzero.c ft_memcpy.c		\
 			ft_islower.c ft_sort.c ft_strnjoin.c ft_strextend.c			\
 			ft_strnextend.c ft_itoa_base.c ft_strrnchr.c ft_strnchr.c	\
 			ft_strupcase.c get_next_line.c ft_treeadd.c ft_treenew.c	\
-			ft_tree_inorder_print.c)
+			ft_tree_inorder_print.c ft_treenew_ptr.c)
 
 SRCPRTF	=	$(addprefix srcs/ft_printf/, ft_printf.c store/ft_store_struct.c	\
 			store/ft_store_struct_2.c store/ft_struct_init_del.c			\

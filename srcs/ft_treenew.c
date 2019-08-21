@@ -6,7 +6,7 @@
 /*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 15:08:55 by allefebv          #+#    #+#             */
-/*   Updated: 2019/08/13 17:43:54 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/08/14 18:47:46 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_tree	*ft_treenew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(new->content = (void*)malloc(sizeof(content_size))))
+		if (!(new->content = (void*)malloc(content_size)))
 			return (NULL);
 		ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
