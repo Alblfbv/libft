@@ -6,7 +6,7 @@
 /*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:07 by allefebv          #+#    #+#             */
-/*   Updated: 2019/08/18 12:04:18 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/08/27 19:29:21 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <unistd.h>
 
 # define BUFF_SIZE 32
+
+typedef enum		e_br_tree_color
+{
+	red,
+	black,
+}					t_br_tree_color;
 
 typedef struct		s_list
 {
@@ -31,6 +37,8 @@ typedef struct		s_tree
 	size_t			content_size;
 	struct s_tree	*left;
 	struct s_tree	*right;
+	struct s_tree	*parent;
+	t_br_tree_color	color;
 }					t_tree;
 
 void				*ft_memset(void *s, int c, size_t len);
@@ -109,8 +117,8 @@ t_list				*ft_lst_end(t_list *start);
 t_list				*ft_lst_find_prev(t_list *lst, t_list *elem);
 void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void				ft_lstadd(t_list **alst, t_list *elem);
-void				ft_lstadd_end(t_list **alst, t_list *elem);
+int					ft_lstadd(t_list **alst, t_list *elem);
+int					ft_lstadd_end(t_list **alst, t_list *elem);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstprint_int(t_list *lst);
 void				ft_lstprint_str(t_list *lst);
@@ -125,6 +133,18 @@ int					ft_treeadd(t_tree **root, t_tree *node,
 						int (*ft_comp)(void*, void*));
 void				ft_tree_inorder_print(t_tree *root, void *additional_cntnt,
 						void (*ft_print)(void*, void*));
+int					ft_br_treeadd(t_tree **root, t_tree *elem,
+						int (*ft_comp)(void*, void*));
+void				ft_four_cases(t_tree *elem, t_tree **root);
+void				ft_br_tree_recolor(t_tree *elem, t_tree *uncle);
+void				ft_br_tree_color_swap(t_tree *elem1, t_tree *elem2);
+t_tree				*ft_tree_uncle(t_tree *elem);
+t_tree				*ft_tree_grandparent(t_tree *elem);
+void				ft_tree_left_rotate(t_tree *start_top, t_tree **root);
+void				ft_tree_right_rotate(t_tree *start_top, t_tree **root);
+t_br_tree_color		ft_color_of_node(t_tree *elem);
+void				ft_treedel(t_tree **root, void (*del)(void *, size_t));
+void				ft_treedelone(t_tree **root, void (*del)(void *, size_t));
 
 int					ft_power(int nb, int pwr);
 size_t				ft_nblen(int n);

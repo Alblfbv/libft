@@ -6,7 +6,7 @@
 /*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 15:22:53 by allefebv          #+#    #+#             */
-/*   Updated: 2019/08/21 15:34:17 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/08/22 21:02:58 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,35 @@
 
 /*
 ** ft_comp return values :
-** 1 if node->key >= *root->key
-** 0 if node->key < *root->key
+** RETURN NEGATIF si node GAUCHE root
+** RETURN 0 ou PLUS si node DROITE root
 */
 
 int		ft_treeadd(t_tree **root, t_tree *node, int (*ft_comp)(void*, void*))
 {
-	if (node == NULL)
+	t_tree	*probe;
+	t_tree	*future_parent;
+
+	if (node == NULL || root == NULL)
 		return (0);
-	if (*root == NULL)
+	else if (*root == NULL && (*root = node))
 	{
-		*root = node;
+		node->parent = NULL;
 		return (1);
 	}
-	if (ft_comp((*root)->content, node->content) < 0)
-		ft_treeadd(&(*root)->right, node, ft_comp);
+	probe = *root;
+	while (probe != NULL)
+	{
+		future_parent = probe;
+		if (ft_comp(probe->content, node->content) >= 0)
+			probe = probe->right;
+		else
+			probe = probe->left;
+	}
+	if (ft_comp(future_parent->content, node->content) >= 0)
+		future_parent->right = node;
 	else
-		ft_treeadd(&(*root)->left, node, ft_comp);
+		future_parent->left = node;
+	node->parent = future_parent;
 	return (1);
 }

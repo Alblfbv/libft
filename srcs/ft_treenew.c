@@ -6,7 +6,7 @@
 /*   By: allefebv <allefebv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 15:08:55 by allefebv          #+#    #+#             */
-/*   Updated: 2019/08/14 18:47:46 by allefebv         ###   ########.fr       */
+/*   Updated: 2019/08/22 13:38:43 by allefebv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ t_tree	*ft_treenew(void const *content, size_t content_size)
 	}
 	new->left = NULL;
 	new->right = NULL;
+	new->parent = NULL;
 	return (new);
 }
